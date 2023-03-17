@@ -14,11 +14,11 @@ for (i = 0; i < 10; i++)
 {
 for (j = 0; j < 9; j++)
 {
-for (k = i; k < 10; k++)
+for (k = 0; k < 10; k++)
 {
-for (l = j; l < 10; l++)
+for (l = 0; l < 10; l++)
 {
-if ((i * 10 + j) != (k * 10 + l)) 
+if ((i * 10 + j) != (k * 10 + l) && (i * 10 + j) > (k * 10 + l)) 
 {
 putchar(48 + i);
 putchar(48 + j);
