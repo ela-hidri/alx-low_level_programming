@@ -15,7 +15,7 @@ for (j = 0; j < 9; j++)
 {
 for (k = 0; k < 10; k++)
 {
-if ((i < j && j < k) && (i != j && i != k && k !=j))
+if ((i < j && j < k) && (i != j && i != k && k != j))
 {
 putchar(48 + i);
 putchar(48 + j);
