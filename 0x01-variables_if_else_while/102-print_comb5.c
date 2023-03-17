@@ -6,9 +6,11 @@
  */
 int main(void)
 {
-for(int i = 0; i < 100 ; i++){
-for(int j = 0; j < 100 ; j++){
-        if ((i+i%10) != (j+j%10) && i<j )
+int i = 0;
+int j = 0;
+for(i = 0; i < 100 ; i++){
+for(j = 0; j < 100 ; j++){
+if ((i+i%10) != (j+j%10) && i<j )
 {
 putchar((i/10)+'0');
 putchar((i%10)+'0');
