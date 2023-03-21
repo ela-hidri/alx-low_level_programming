@@ -15,6 +15,7 @@ for (i = 0; i < 10; i++)
 	{
 	rst = i * j;
 	if (rst < 10)
+		if(i != 0)
 		_putchar(' ');
 	else 
 		_putchar(rst / 10 + '0');
