@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 /**
  * print_to_98 -  prints all natural numbers from n to 98.
  * @n: integer to star counting from
@@ -7,17 +7,22 @@
  */
 void print_to_98(int n)
 {
-while (n != 99)
+if (n < 98)
 {
-if (n < 10)
-	_putchar(' ');
-else
-	_putchar (n / 10 + '0');
-_putchar (n % 10 + '0');
-if (n > 98)
-	n--;
+	while (n < 98)
+	{
+		printf("%d, ", n);
+		n++;
+	}
+	printf("%d", n);
+}
 else 
-	n++;
-_putchar(',');
+{
+        while (n > 98)
+        {
+                printf("%d, ", n);
+                n--;
+        }
+        printf("%d", n);
 }
 }
