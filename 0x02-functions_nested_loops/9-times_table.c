@@ -19,7 +19,7 @@ for (i = 0; i < 10; i++)
 	else 
 		_putchar(rst / 10 + '0');
 	_putchar(rst % 10 + '0');
-	if(i !=9 || j != 9)
+	if (j != 9)
 	{
 		_putchar(',');
 		_putchar(' ');
