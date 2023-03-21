@@ -7,7 +7,7 @@
  * if equle to 0, 0 is returned, else , -1 returnd
  */
 int print_sign(int n)
-{i
+{
 if (n > 0)
 {
 	_putchar('+');
