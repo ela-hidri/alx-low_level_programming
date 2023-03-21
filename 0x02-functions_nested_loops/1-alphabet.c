@@ -6,7 +6,7 @@
  * Return:  success always.
  */
 
-void print_alphabet()
+void print_alphabet(void)
 {
 int c = 97;
 while (c < 123)
