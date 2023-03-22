@@ -8,21 +8,21 @@
 int main(void)
 {
 	int n = 0;
-	int x1 = 1;
-	int x2 = 2;
-	int nx = x1 + x2;
-	printf("%d, ", x1);
-	printf("%d, ", x2);
-       	printf("%d, ", nx);
+	long x1 = 1;
+	long x2 = 2;
+	long nx = x1 + x2;
+	printf("%ld, ", x1);
+	printf("%ld, ", x2);
+       	printf("%ld, ", nx);
 	for (n = 3; n < 50; n++)
 	{
 		x1 = x2;
 		x2 = nx;
 		nx = x1 + x2;
 		if (n == 49)
-			printf("%d\n", nx);
+			printf("%ld\n", nx);
 		else 
-			printf("%d, ", nx);
+			printf("%ld, ", nx);
 	}
 	return (0);
 }
