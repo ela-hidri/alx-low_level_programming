@@ -8,8 +8,8 @@
 int main(void)
 {
 	int n = 0;
-	int x1 = 0;
-	int x2 = 1;
+	int x1 = 1;
+	int x2 = 2;
 	int nx = x1 + x2;
 	printf("%d, ", x1);
 	printf("%d, ", x2);
