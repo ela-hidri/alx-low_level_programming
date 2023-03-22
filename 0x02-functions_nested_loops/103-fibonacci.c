@@ -7,11 +7,10 @@
  */
 int main(void)
 {
-	int n = 0;
 	long x1 = 1;
 	long x2 = 2;
 	long nx = x1 + x2;
-	long long sum = 0;
+	long sum = 0;
 
 	sum = x2;
 	while (nx < 4000000)
