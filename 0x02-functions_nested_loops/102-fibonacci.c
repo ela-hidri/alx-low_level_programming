@@ -11,9 +11,10 @@ int main(void)
 	long x1 = 1;
 	long x2 = 2;
 	long nx = x1 + x2;
+
 	printf("%ld, ", x1);
 	printf("%ld, ", x2);
-       	printf("%ld, ", nx);
+	printf("%ld, ", nx);
 	for (n = 3; n < 50; n++)
 	{
 		x1 = x2;
@@ -21,7 +22,7 @@ int main(void)
 		nx = x1 + x2;
 		if (n == 49)
 			printf("%ld\n", nx);
-		else 
+		else
 			printf("%ld, ", nx);
 	}
 	return (0);
