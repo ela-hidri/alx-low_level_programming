@@ -7,21 +7,18 @@
  */
 int main(void)
 {
-	long x1 = 1;
-	long x2 = 2;
-	long nx = x1 + x2;
-	long sum = 0;
+	long j = 1, k = 2, sum = k;
 
-	sum = x2;
-	while (nx < 4000000)
+	while (k + j < 4000000)
 	{
-		x1 = x2;
-		x2 = nx;
-		nx = x1 + x2;
+		k += j;
 
-		if (nx % 2 == 0)
-			sum += nx;
+		if (k % 2 == 0)
+			sum += k;
+
+		j = k - j;
 	}
-	printf("%ld\n", nx);
+
+	printf("%ld\n", sum);
 	return (0);
 }
