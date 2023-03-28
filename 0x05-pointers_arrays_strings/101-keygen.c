@@ -9,9 +9,10 @@
 int main(void)
 {
 	char list[] = "1234567890qwertyuiopasdfghjklzxcvbnm!@#$%^&*()_- +=QWERTYUIOPASDFGHJKLZXCVBNM[]{};':\"<>,.?/\\|";
-	srand(time(NULL));
 	int sum;
 	char r;
+
+	srand(time(NULL));
 	
 
 	do{
