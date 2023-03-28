@@ -29,4 +29,5 @@ int main(void)
 
 	}
 	while(sum != 2772);
+	return (0);
 }
