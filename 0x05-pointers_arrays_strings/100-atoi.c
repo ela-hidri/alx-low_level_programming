@@ -7,7 +7,7 @@
  */
 int _atoi(char *s)
 {
-	int c = 0;
+	unsigned int c = 0;
 	int sign = 1;
 	int l = 0;
 
@@ -17,7 +17,7 @@ int _atoi(char *s)
 			sign *= -1;
 		if (c != 0 && *s == ' ')
 			break;
-		if( *s >= '0' && *s <= '9')
+		if (*s >= '0' && *s <= '9')
 		{
 			c = (c * 10) + (*s - '0');
 		}
