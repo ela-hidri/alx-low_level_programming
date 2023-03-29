@@ -9,17 +9,13 @@
 char *_strncpy(char *dest, char *src, int n)
 {
 	char *s = dest;
-	int exist = 0;
-	while(n >= 0)
+
+	while(n > 0)
 	{
 		*dest = *src;
-		if (*dest == '\0')
-			exist = 1;
 		dest++;
 		src++;
 		n--;
 	}
-	if (exist == 1)
-		*dest = '\0';
 	return (s);
 }
