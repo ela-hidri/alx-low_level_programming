@@ -1,3 +1,4 @@
+#include <stddef.h>
 /**
  * _strchr -  locates a character in a string.
  * @c: character to look for
@@ -9,5 +10,7 @@ char *_strchr(char *s, char c)
 {
 	while (*(s) != '\0' && *(s) != c)
 		s++;
+	if (*(s) == '\0')
+		return (NULL);
 	return (s);
 }
