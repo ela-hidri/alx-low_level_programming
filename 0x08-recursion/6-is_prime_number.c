@@ -24,7 +24,6 @@ int _checknumber(int i, int n)
 	i++;
 	return (_checknumber(i, n));
 }
-#include <stdio.h>
 /**
  * is_prime_number - checks if the number is a prime number,
  * @n: number to check
