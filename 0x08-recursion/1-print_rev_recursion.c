@@ -7,10 +7,11 @@
  */
 void _print_rev_recursion(char *s)
 {
-	if (*s == '\0')
+	char c = *s;
+
+	if (*s)
 	{
-		return;
+		_print_rev_recursion(++s);
+		_putchar(c);
 	}
-	_print_rev_recursion(++s);
-	_putchar(*s);
 }
