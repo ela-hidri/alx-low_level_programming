@@ -13,11 +13,7 @@ int main(int  argc, char *argv[])
 	int i = 0;
 	unsigned int sum = 0;
 
-	if(argc < 2)
-	{
-		printf("0\n");	
-	}
-	else
+	if(argc > 1)
 	{
 		for (i = 1; i < argc; i++)
 		{
@@ -28,7 +24,7 @@ int main(int  argc, char *argv[])
 			}
 			sum += atoi(argv[i]);
 		}
-	printf("%d\n", sum);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
