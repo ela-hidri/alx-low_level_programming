@@ -10,15 +10,19 @@
  */
 int main(int  argc, char *argv[])
 {
-	int amount = 0;
-	int coins = 0;
+	int amount = 0, coins = 0;
 
 	if (argc != 2)
 	{
 		printf("Error\n");
-		return (0);
+		return (1);
 	}
 	amount = atoi(argv[1]);
+	if (amount < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	while (amount / 25 != 0)
 	{
 		coins += amount / 25;
