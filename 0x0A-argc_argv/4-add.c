@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 #include <stdlib.h>
 /**
  * main - adds positive numbers.
@@ -16,7 +17,7 @@ int main(int  argc, char *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (!atoi(argv[i]))
+			if (isdigit(*argv[i]) == 0)
 			{
 				printf("Error\n");
 				return (1);
