@@ -47,7 +47,7 @@ char **allocMem(char *str)
 			w++;
 		}
 		i++;
-	 }
+	}
 	return (ar);
 }
 /**
