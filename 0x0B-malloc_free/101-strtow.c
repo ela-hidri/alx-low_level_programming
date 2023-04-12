@@ -81,6 +81,9 @@ char **strtow(char *str)
 			ar[j][w] = str[i];
 			w++;
 		}
+		else if (j < 1 && str[i + 1] == '\0' && w == 0)
+			return (NULL);
+
 		i++;
 	}
 	ar[j] = NULL;
