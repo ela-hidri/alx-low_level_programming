@@ -27,7 +27,7 @@ char **allocMem(char *str)
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != ' ' && str[i + 1] == ' ')
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			ar[j] = malloc(w * sizeof(char) + 2);
 			if (ar[j] == NULL)
@@ -68,7 +68,7 @@ char **strtow(char *str)
 		return (NULL);
 	while (str[i] != '\0')
 	{
-		if (str[i] != ' ' && str[i + 1] == ' ')
+		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
 		{
 			ar[j][w] = str[i];
 			w++;
