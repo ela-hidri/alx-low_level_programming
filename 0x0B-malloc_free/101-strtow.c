@@ -61,7 +61,7 @@ char **strtow(char *str)
 	int i = 0, j = 0, w = 0;
 	char **ar;
 
-	if (str == NULL || *str == '\0')
+	if (str == NULL || str[0] == '\0')
 		return (NULL);
 	ar = allocMem(str);
 	if (ar == NULL)
