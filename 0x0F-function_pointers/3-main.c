@@ -32,7 +32,7 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	if (get_op_func(o) == NULL || *(o + 1) != '\0')
 	{
 		printf("Error\n");
-		exit(98);
+		exit(99);
 	}
 	printf("%d\n", get_op_func(o)(a, b));
 	return (0);
