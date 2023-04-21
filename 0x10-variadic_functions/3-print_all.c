@@ -47,10 +47,10 @@ void print_string(va_list arg)
 
 	x = va_arg(arg, char *);
 	if (x == NULL)
-		{
-			printf("(nil)");
-			return;
-		}
+	{
+		printf("(nil)");
+		return;
+	}
 		printf("%s", x);
 }
 /**
@@ -72,16 +72,15 @@ void print_all(const char * const format, ...)
 	};
 
 	va_start(arg, format);
-	while (*(format + i))
+	while (format && (*(format + i)))
 	{
 		l = 0;
 		while (l < 4 && (*(format + i) != (*(form[l].sym))))
 		{
 			l++;
 		}
-		if(l < 4)
+		if (l < 4)
 		{
-	
 			printf("%s", s);
 			form[l].f(arg);
 			s = ", ";
