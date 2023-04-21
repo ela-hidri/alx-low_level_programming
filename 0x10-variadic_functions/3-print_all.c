@@ -80,7 +80,9 @@ void print_all(const char * const format, ...)
 	{
 		l = 0;
 		while (l < 4 && (*(format + i) != (*(form[l].sym))))
+		{
 			l++;
+		}
 	
 			printf("%s", s);
 			form[l].f(arg);
