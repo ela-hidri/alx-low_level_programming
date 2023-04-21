@@ -33,10 +33,7 @@ void print_float(va_list arg)
  */
 void print_char(va_list arg)
 {
-	char x;
-
-	x = va_arg(arg, int);
-	printf("%c", x);
+	printf("%c", va_arg(arg, int));
 }
 /**
  * print_string- print char
@@ -46,12 +43,11 @@ void print_char(va_list arg)
  */
 void print_string(va_list arg)
 {
-	char *x;
-
-	x = va_arg(arg, char *);
 	if (x == NULL)
-		printf("(nil)");
-	else
+		{
+			printf("(nil)");
+			return;
+		}
 		printf("%s", x);
 }
 /**
