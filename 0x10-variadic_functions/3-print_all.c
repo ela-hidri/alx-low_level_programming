@@ -43,6 +43,9 @@ void print_char(va_list arg)
  */
 void print_string(va_list arg)
 {
+	char *x;
+
+	x = va_arg(arg, char *);
 	if (x == NULL)
 		{
 			printf("(nil)");
