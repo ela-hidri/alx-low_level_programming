@@ -9,10 +9,7 @@
  */
 void print_int(va_list arg)
 {
-	int x;
-
-	x = va_arg(arg, int);
-	printf("%d", x);
+	printf("%d", va_arg(arg, int));
 }
 
 /**
@@ -83,11 +80,13 @@ void print_all(const char * const format, ...)
 		{
 			l++;
 		}
+		if(l < 4)
+		{
 	
 			printf("%s", s);
 			form[l].f(arg);
 			s = ", ";
-		
+		}
 		i++;
 	}
 	printf("\n");
