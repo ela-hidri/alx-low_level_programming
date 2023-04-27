@@ -1,7 +1,7 @@
 #include "lists.h"
-#include <stdio.h>
 #include <stdlib.h>
 #include <stddef.h>
+#include <string.h>
 /**
  * _strlen -  returns the length of a string.
  * @s: pointer of a stirng to return it's length
