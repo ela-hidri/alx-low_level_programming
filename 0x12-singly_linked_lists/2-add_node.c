@@ -3,20 +3,6 @@
 #include <stddef.h>
 #include <string.h>
 /**
- * _strlen - longht of string
- * @s: string
- *
- * Return: length
- */
-int _strlen(const char *s)
-{
-	int i;
-
-	for (i = 0; s[i] != '\0'; i++)
-		;
-	return (i);
-}
-/**
  * add_node - adds a new node at the beginning of a list_t list.
  * @head: head of list
  * @str: data of node
