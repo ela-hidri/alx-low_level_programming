@@ -15,7 +15,7 @@ void closefile(int f)
 	int ff;
 
 	ff = close(f);
-	if (ff < 0)
+	if (ff == -1)
 	{
 		dprintf(STDERR_FILENO,
 				"Error: Can't close fd %d\n", f);
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
 	fr = read(ff, buffer, 1024);
 	ft = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
 	do {
-		if (ff < 0 || fr < 0)
+		if (ff == -1 || fr == -1)
 		{
 			dprintf(STDERR_FILENO,
 					"Error: Can't read from file %s\n", argv[1]);
@@ -58,7 +58,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 		fw = write(ft, buffer, fr);
-		if (ft < 0 || fw < 0)
+		if (ft == -1 || fw == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
