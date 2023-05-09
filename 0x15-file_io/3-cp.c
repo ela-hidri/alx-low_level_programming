@@ -18,7 +18,7 @@ void closefile(int f)
 	if (ff < 0)
 	{
 		dprintf(STDERR_FILENO,
-				"Error: Can't close fd %d\n", ff);
+				"Error: Can't close fd %d\n", f);
 		exit(100);
 	}
 }
@@ -60,7 +60,7 @@ int main(int argc, char *argv[])
 		fw = write(ft, buffer, fr);
 		if (ft < 0 || fw < 0)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[1]);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			free(buffer);
 			exit(99);
 		}
