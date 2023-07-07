@@ -11,13 +11,37 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *node;
+	char *cp_value;
 	unsigned long int index = key_index((const unsigned char *)key, ht->size);
 
+	cp_value= strdup(value);
+	if (cp_value == NULL)
+		return (0);
 	if (ht == NULL || strcmp(key, "") == 0 || strcmp(value, "") == 0)
 		return(0);
-	node = create_item(key, value);
-	printf("get index\n");
+	node = malloc(sizeof(hash_node_t));
 	if (node == NULL)
+		return (0);
+	node->key = strdup(key);
+	if (node->key == NULL)
+	{
+		free(node);
+		return (0);
+	}
+	node->value = cp_value;
+	if (ht->array[index] != NULL)
+	{
+		if (strcmp(ht->array[index]->key, key) == 0)
+		{
+			strcpy(ht->array[index]->value, value);
+			return(1);
+		}
+	}
+	node->next = ht->array[index];
+	ht->array[index] = node;
+	return (1);
+}
+	/*if (node == NULL)
 	{
 		printf("inherr");
 		ht->array[index] = node;
@@ -32,16 +56,17 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		{
 			handle_collision(ht, node, index);
 		}
-	}
-	return (1);
-}
+	}*/
+
+
 /**
  * handle_collision - handle collisions
  * @ht: hash table
  * @node: node to add
  *
  * Return: nothing
- */
+*/
+/*
 void handle_collision(hash_table_t *ht, hash_node_t *new,
 	       unsigned long int index)
 {
@@ -57,4 +82,4 @@ void handle_collision(hash_table_t *ht, hash_node_t *new,
 		node = node->next;
 	}
 	node->next = new;
-}
+}*/
