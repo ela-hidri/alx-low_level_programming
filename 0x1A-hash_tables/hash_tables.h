@@ -38,4 +38,8 @@ hash_table_t *hash_table_create(unsigned long int size);
 unsigned long hash_function(char *str, unsigned long int size);
 unsigned long int hash_djb2(const unsigned char *str);
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
+hash_node_t *create_item(const char *key, const char *value);
+void handle_collision(hash_table_t *ht, hash_node_t *node,
+		unsigned long int index);
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 #endif

@@ -1,5 +1,5 @@
 #include "hash_tables.h"
-hash_node_t *create_item(char *key, char *value);
+hash_node_t *create_item(const char *key, const char *value);
 /**
  * hash_table_create - creates a hash table.
  * @size: size of hash table
@@ -36,14 +36,14 @@ hash_table_t *hash_table_create(unsigned long int size)
  *
  * Return: hash node
  */
-hash_node_t *create_item(char *key, char *value)
+hash_node_t *create_item(const char *key, const char *value)
 {
 	hash_node_t *node;
 
 	node = (hash_node_t *) malloc(sizeof(hash_node_t));
 	if (node == NULL)
 		return (NULL);
-	node->key = (char *) malloc(strlen(key) + 1);
+	/*node->key = (char *) malloc(strlen(key) + 1);
 	if (node->key == NULL)
 	{
 		free(node);
@@ -56,7 +56,7 @@ hash_node_t *create_item(char *key, char *value)
 		free(node->key);
 		return (NULL);
 	}
-	node->next = malloc(sizeof(hash_node_t *));
+	node->next = malloc(sizeof(hash_node_t *));*/
 	strcpy(node->key, key);
 	strcpy(node->value, value);
 	node->next = NULL;
